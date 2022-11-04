@@ -175,16 +175,17 @@ console.log(manav);
 			4. elde edilen string döndürülecek
  */
 
-function emojileriDonustur(string,emojiler){
-	
-	console.log(p.toLowercase().replaceAll(":)","🙂"));
-	console.log(p.toLowercase().replaceAll(":(", "😔"));
-	console.log(p.toLowercase().replaceAll(":d", "😁"));
-	console.log(p.toLowercase().replaceAll(":p", "😛"));
-	console.log(p.toLowercase().replaceAll(":o", "😱"));
-	console.log(p.toLowercase().replaceAll("<3", "❤️"));
-	
+function emojileriDonustur(string,emoji){
+
+	for (let x in emoji){
+
+	string=string.replaceAll(x,emoji[x]);
+	string=string.replaceAll(x.toUpperCase(),emoji[x]);
+
 }
+return string;
+}
+console.log(emojileriDonustur(":) :d :D",emojiler));
 
 
 
